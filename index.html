@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive image gallery created for CodeAlpha Frontend Development Task 1.">
+  <title>Vistara — Image Gallery | CodeAlpha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">VISTARA<span>°</span></div>
+      <a href="#gallery">Explore Gallery</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">CODEALPHA • FRONTEND TASK 1</p>
+      <h1>See the world<br><em>beautifully.</em></h1>
+      <p class="intro">A responsive visual gallery with categories, interactive lightbox navigation and smooth transitions.</p>
+      <a class="cta" href="#gallery">View Collection ↓</a>
+    </div>
+  </header>
+
+  <main id="gallery">
+    <section class="section-head">
+      <div>
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2>Visual moments</h2>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter gallery">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="nature">Nature</button>
+        <button class="filter" data-filter="city">City</button>
+        <button class="filter" data-filter="travel">Travel</button>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Image gallery">
+      <article class="card nature">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85" alt="Mountain landscape">
+        <div class="caption"><span>01 / Nature</span><h3>Into the wild</h3></div>
+      </article>
+
+      <article class="card city">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=85" alt="City skyline">
+        <div class="caption"><span>02 / City</span><h3>Urban rhythm</h3></div>
+      </article>
+
+      <article class="card travel">
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85" alt="Road through mountains">
+        <div class="caption"><span>03 / Travel</span><h3>Open roads</h3></div>
+      </article>
+
+      <article class="card nature">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85" alt="Lake surrounded by mountains">
+        <div class="caption"><span>04 / Nature</span><h3>Quiet waters</h3></div>
+      </article>
+
+      <article class="card city">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=85" alt="City street">
+        <div class="caption"><span>05 / City</span><h3>After dark</h3></div>
+      </article>
+
+      <article class="card travel">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Mountain peaks">
+        <div class="caption"><span>06 / Travel</span><h3>Higher ground</h3></div>
+      </article>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="close" aria-label="Close image viewer">×</button>
+    <button class="nav prev" aria-label="Previous image">‹</button>
+
+    <div class="viewer">
+      <img id="lightboxImage" src="" alt="">
+      <div class="viewer-info">
+        <span id="counter"></span>
+        <h3 id="lightboxTitle"></h3>
+      </div>
+    </div>
+
+    <button class="nav next" aria-label="Next image">›</button>
+  </div>
+
+  <footer>
+    <span>VISTARA°</span>
+    <span>CodeAlpha • Frontend Development Task 1</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
